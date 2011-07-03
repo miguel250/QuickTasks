@@ -11,14 +11,16 @@ use Library\Views;
 class Controllers
 {
 	protected  $view;
+	protected  $pattern;
 	
 	
 	/**
 	 * Construct controllers variables
 	 */
-	public  function __construct()
+	public  function __construct($pattern)
 	{
 		$this->view = new Views();
+		$this->pattern = $pattern;
 		$this->load();
 		$this->view->getView();	
 	}

@@ -31,9 +31,9 @@ class Router
 	private function LoadController()
 	{
 		if ($this->patternVariable){
-			return new $this->controller($this->pattern);
+			return new $this->controller($this->pattern,$this->pattern);
 		}else{
-			return new $this->controller();
+			return new $this->controller($this->pattern);
 		}
 	}
 
