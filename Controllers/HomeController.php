@@ -36,7 +36,7 @@ class HomeController extends Controllers
 				"id" => $this->hash->getHash(4),
 				'c_at'=> $createdAt->format('d-m-Y H:i:s'),
 				'n'=> array(
-				'1'=> array('b'=>$_POST['task'],'c'=>0)
+				'1'=> array('b'=>htmlspecialchars($_POST['task']),'c'=>0)
 				));
 
 			

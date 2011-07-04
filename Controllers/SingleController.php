@@ -43,7 +43,7 @@ class SingleController extends Controllers
 			if($_POST['token'] == $_COOKIE['quicklist']){
 
 			$id = array('id' => $id);
-            $add = array('$set' => array('n.'.$upset => array('b'=>$_POST['task'],'c'=>0)));
+            $add = array('$set' => array('n.'.$upset => array('b'=>htmlspecialchars($_POST['task']),'c'=>0)));
 			 $list->Update($id ,$add);
 			 $formData['token'] = $token;
 			 setcookie('quicklist',$token);
