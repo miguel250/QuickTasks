@@ -20,6 +20,7 @@ define('mongoDatabase','Lists');
  * );
  */
  $routers = array(
+ 'completed' => array('controller'=>'completed','pattern'=>'/completed/'),
  'single' => array('controller'=>'single','pattern'=>'{id}'),
  'homepage' => array('controller'=>'home','pattern'=>'/'),
  );
