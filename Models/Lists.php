@@ -27,17 +27,9 @@ class Lists
 	 */
 	public function find(array $query)
 	{
-		$find = $this->mongo->find($query);
-		$data = array();
-		$i = 0;
-
-		while( $find->hasNext())
-		{
-			$data[$i] = $find->getNext();
-			$i++;
-		}
-
-		return $data;
+		$find = $this->mongo->findOne($query);
+	   
+		return $find;
 	}
 	/**
 	 * Get every document
@@ -51,9 +43,9 @@ class Lists
 	 * Update document
 	 * @param array $id
 	 */
-	public function Update(array $id)
+	public function Update(array $id, array $info)
 	{
-		$this->mongo->update($id);
+	$this->mongo->update($id,$info);
 	}
 
 	/**
