@@ -16,7 +16,9 @@ class Views
 	{
 		$data = $this->data;
 		$data2 = $this->data2;
+		if(!empty($this->viewName)){
 		require_once __DIR__.'/../Views/'.$this->viewName.'.php';
+		}
 		return true;
 	}
 
