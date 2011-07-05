@@ -17,8 +17,8 @@
 	}?>
 	</ul>
 	</div>
-	<form name="task" action="/<?php echo $data['id']?>" method="post">
-		<input type="text" name="task" /> <input type="hidden" name="token"
+	<form id="task" action="/<?php echo $data['id']?>" method="post">
+		<input type="text" id="task-input" name="task" required  /> <input type="hidden" name="token"
 			value="<?php echo $data2['token'] ?>" /> <input type="submit"
 			value="Add Task" />
 	</form>
@@ -37,7 +37,7 @@
         	 $('#taskId').attr('value', $taskId); 
         	 $('#complete').submit(); 
           }  
-
+$()
           var pusher = new Pusher('22b54ca3dc1bdb53bb06');
           var channel = pusher.subscribe('<?php echo $data['id']?>');
           
