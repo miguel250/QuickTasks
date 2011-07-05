@@ -6,7 +6,7 @@
 </head>
 <body>
 	<form name="input" action="/" method="post">
-		<input type="text" name="task" /> <input type="hidden" name="token"
+		<input type="text" name="task" required /> <input type="hidden" name="token"
 			value="<?php echo $data2['token'] ?>" /> <input type="submit"
 			value="Add Task" />
 	</form>
