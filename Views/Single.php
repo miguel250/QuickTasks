@@ -42,7 +42,7 @@ $()
           var channel = pusher.subscribe('<?php echo $data['id']?>');
           
           channel.bind('added', function(data) {
-            $('#list ul').append('<li id="'+data.taskid+'">'+data.b+'<input type="checkbox" name="completed" onclick="Complete('+data.taskid+')" /></li>');
+            $('#list ul').append('<li id="'+data.taskid+'">'+data.b+'<input type="checkbox" name="completed" onclick="Complete('+data.taskid+')" /></li>').show("slow");
           });
 
           channel.bind('completed', function(data) {
