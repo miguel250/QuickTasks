@@ -6,10 +6,10 @@ use Library\Models;
  * Mongodb Settings
  */
 
-define('mongoHostname','localhost');
-define('mongoUsername','root');
-define('mongoPassword','root');
-define('mongoDatabase','Lists');
+define('mongoHostname',$_SERVER['Hostname']);
+define('mongoUsername',$_SERVER['Username']);
+define('mongoPassword',$_SERVER['Password']);
+define('mongoDatabase',$_SERVER['DatabaseName']);
 
 
  

@@ -53,8 +53,8 @@ class SingleController extends Controllers
 			 setcookie('quicklist',$token);
 			 $data	= $list->find(array('id'=>$this->id));
 
-			 $key = 'pusher key' ;
-			 $secret = 'pusher secret';
+			 $key = $_SERVER['pusher-key'];
+			 $secret = $_SERVER['pusher-secret'];
 			 $appId = 6676;
 			 $channel = $data['id'];
 			 $event = 'added';

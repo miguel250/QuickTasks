@@ -24,9 +24,9 @@ class CompletedController extends Controllers
 			 $id = array('id' => $_POST['id']);
 			 $add = array('$set' => array('n.'.$_POST['taskId'].'.c' => 1 ));
 			 $list->Update($id ,$add);
-				
-			 $key = 'pusher key' ;
-      		$secret = 'pusher secret';
+			 
+			$key = $_SERVER['pusher-key'];
+			$secret = $_SERVER['pusher-secret'];
       		$appId = 6676;
       		$channel = $_POST['id'];
       		$event = 'completed';
