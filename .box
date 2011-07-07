@@ -2,6 +2,6 @@ document_root: web
 index_list: [index.php]
 default_gateway: index.php
 
- php_version: 5.3.5
- php_error_reporting: 'E_ALL'
- php_extensions: [mongodb, curl]
+php_version: 5.3.5
+php_error_reporting: 'E_ALL'
+php_extensions: [mongodb, curl]
